@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}Eliminación de Despacho{% endblock titulo%}
+{% block a.e %}active{% endblock a.e %}
+
+{% block base %}
+
+<div class="container text-center">
+    <img src="{% static 'img/mani.jpg' %}" alt="frutos4" style=" width:400px; padding: 6px;">
+</div>
+<div class="border-top border-bottom border-secondary w-50 mx-auto my-3">
+    <h1 style="text-align: center;">Eliminación de Pedido</h1>
+</div>
+<div class="container">
+    <p style="text-align: center; padding: 6px; color: rgb(44, 54, 63);">Acá podras eliminar tus pedidos ingresando su
+        número de despacho.</p>
+</div>
+
+<form class="form-group" method="POST" action="."> {% csrf_token %}
+    <div class="container-fluid" style="padding: 8px; background-color: cornsilk;">
+        {{ form.as_p }}
+        <button class="btn btn-outline-dark btn-lg btn-block" type="submit">Eliminar Pedido</button>
+    </div>
+</form>
+
+{% endblock base %}

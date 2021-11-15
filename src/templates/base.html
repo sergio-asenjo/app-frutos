@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/all.css">
+    <link rel="icon" href="{% static 'img/icon.png' %}" type="image/icon type">
+    <title>La Semillita ─ {% block titulo %}{% endblock titulo %}</title>
+</head>
+<body>
+    
+    <div class="top-bar">
+        <div class="container">
+            <div class="col-12 text-center">
+                <p>¡Los mejores frutos secos de Chile!</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar bg-light navbar-light navbar-expand-lg">
+        <div class="container">
+
+            <a href="inicio.html" class="navbar-brand"><img src="{% static 'img/logo.png' %}" alt="Logo" title="Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="/" class="nav-link {% block a.i %}{% endblock%}">Inicio</a></li>
+                    <li class="nav-item"><a href="/registro_despacho" class="nav-link {% block a.r %}{% endblock%}">Registrar Despacho</a></li>
+                    <li class="nav-item"><a href="/listado_despachos" class="nav-link {% block a.l %}{% endblock%}">Listar Despachos</a></li>
+                    <li class="nav-item"><a href="/actualizar_despacho" class="nav-link {% block a.a %}{% endblock%}">Actualizar Despacho</a></li>
+                    <li class="nav-item"><a href="/eliminar_despacho" class="nav-link {% block a.e %}{% endblock%}">Eliminar Despacho</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block base %}
+    {% endblock base %}
+
+    <div class="jumbotron py-5 mb-0">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-7 col-lg-8 col-xl-9 my-auto text-light">
+                    <h4>¿Desea realizar un pedido?</h4>
+                </div>
+
+                <div class="col-md-5 col-lg-4 col-xl-3">
+                    <a href="#" class="btn btn-outline-light btn-lg">¡Contáctanos!</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row text-light text-center py-4 justify-content-center">
+
+                <div class="col-sm-10 col-md-8 col-lg-6">
+                    <img src="{% static 'img/logo.png' %}" alt="Logo">
+                    <p>Entregando el mejor servicio en frutos secos desde 1 A. c.</p>
+                    <ul class="social pt-3">
+                        <li><a href="#"><i class="fab fa-facebook fa-3x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp fa-3x"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="socket text-light text-center py-3">
+        <p>&copy; <a href="#">www.lasemillita.cl</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

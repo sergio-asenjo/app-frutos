@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}Actualizar Despacho{% endblock titulo %}
+{% block a.a %}active{% endblock a.a %}
+
+{% block base %}
+
+<div class="container text-center">
+    <img src="{% static 'img/pasas.jpg' %}" alt="frutos4" style=" width:400px; padding: 6px;">
+</div>
+<div class="border-top border-bottom border-secondary w-50 mx-auto my-3">
+    <h1 style="text-align: center;">Actualización de Pedido</h1>
+</div>
+<div class="container">
+    <p style="text-align: center; padding: 6px; color: rgb(44, 54, 63);">Acá podras actualizar tus pedidos ingresando su
+        número de despacho.</p>
+</div>
+
+<div class="container-fluid" style="padding: 8px; background-color: cornsilk;">
+    <form class="form-group" method="POST" action="."> {% csrf_token %}
+        <div class="row">
+            <div class="col-6">
+                {{ form }}
+            </div>
+            <div class="col-6 my-auto">
+                <input type="radio" id="despacho_por_enviar" name="estado_despacho" value="Por Enviar" checked>
+                <label for="despacho_por_enviar">Despacho Por Enviar</label>
+                <input type="radio" id="despacho_entregado" name="estado_despacho" value="Entregado">
+                <label for="despacho_entregado">Despacho Entregado</label>
+                <button class="btn btn-outline-dark" type="submit">Actualizar Estado del Despacho</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock base %}

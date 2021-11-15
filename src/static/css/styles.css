@@ -1,0 +1,81 @@
+.navbar-light {
+    background-color: #7f5539!important;
+}
+
+.top-bar {
+    background: #b08968;
+    height: 2.8rem;
+    padding: .5rem 0;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    height: 4rem;
+}
+
+.navbar {
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
+    z-index: 1;
+}
+
+.nav-item {
+    padding: .5rem;
+}
+
+.nav-link {
+    color: white!important;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: black!important;
+}
+
+#carousel {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
+}
+
+.carousel-inner {
+    max-height: 38rem!important;
+}
+
+.jumbotron {
+    background-color: #ddb892!important;
+}
+
+footer {
+    background-color: #9c6644;
+    padding: 1rem 2rem 3rem;
+}
+
+footer img {
+    height: 5rem;
+    margin: 1.5rem auto;
+}
+
+footer p, footer a 
+.socket a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+ul.social {
+    list-style-type: none;
+    display: flex;
+    max-width: 16rem;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul.social li {
+    margin: 0 auto;
+}
+
+.socket {
+    background-color: black;
+    border-top: .1rem solid white;
+}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}Listado Pedidos{% endblock titulo %}
+{% block a.l %}active{% endblock a.l %}
+
+{% block base %}
+
+<div class="container text-center">
+    <img src="{% static 'img/frutos4.jpg' %}" alt="frutos4" style=" width:400px; padding: 6px;">
+</div>
+<div class="border-top border-bottom border-secondary w-50 mx-auto my-3">
+    <h1 style="text-align: center;">Listado de productos</h1>
+</div>
+<div class="container">
+    <p style="text-align: center; padding: 6px; color: rgb(44, 54, 63);">Acá podras listar tu producto de manera rápida
+        y eficiente.</p>
+</div>
+
+<div class="container-fluid">
+
+    <table class="table table-striped table-bordered" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>Número Despacho</th>
+                <th>Nombre Cliente</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Productos</th>
+                <th>Peso Total</th>
+                <th>Fecha Ingresado</th>
+                <th>Fecha Envío</th>
+                <th>Estado</th>
+                <th>Profundidad</th>
+                <th>Ancho</th>
+                <th>Alto</th>
+            </tr>
+        </thead>
+        {% for despacho in listado %}
+        <tr>
+            <td>{{ despacho.numero_despacho }}</td>
+            <td>{{ despacho.nombre_cliente }}</td>
+            <td>{{ despacho.dirección_cliente }}</td>
+            <td>{{ despacho.telefono_cliente }}</td>
+            <td>{{ despacho.productos_cliente }}</td>
+            <td>{{ despacho.peso_productos }} Kg.</td>
+            <td>{{ despacho.fecha_ingreso_despacho }}</td>
+            <td>{{ despacho.fecha_envio_despacho }}</td>
+            <td>{{ despacho.estado_despacho }}</td>
+            <td>{{ despacho.profundidad_despacho }} cm.</td>
+            <td>{{ despacho.ancho_despacho }} cm.</td>
+            <td>{{ despacho.alto_despacho }} cm.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock base %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}Registro Despachos{% endblock titulo%}
+{% block a.r %}active{% endblock a.r %}
+
+{% block base %}
+
+<div class="container-fluid my-5">
+    <div class="row">
+        <div class="col-6">
+            <form method="POST" action="." id="form_registro"> {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-outline-dark btn-lg btn-block" form="form_registro">Registrar
+                    Despacho</button>
+            </form>
+        </div>
+        <div class="col-6 my-auto">
+            <img class="rounded mx-auto d-block" src="{% static 'img/frutos1.jpg' %}" alt="" width="500px">
+            <h1 class="text-dark pt-4 text-center">Registro de Despacho</h1>
+            <div class="border-top border-secondary w-50 mx-auto my-3"></div>
+            <p class="lead text-center">Entregamos tus despachos en la primera caja que encontramos, siempre llegamos tarde pero
+                ¡Tocamos la puerta hasta que salgas!</p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+{% endblock base %}
